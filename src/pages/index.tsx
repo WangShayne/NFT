@@ -1,9 +1,9 @@
 import styles from './index.less';
-import Browse from "./Browse";
+import Browse from './Browse';
 
 export default function IndexPage() {
   return (
-    <div>
+    <div style={{ height: '100%' }}>
       <Browse />
     </div>
   );
