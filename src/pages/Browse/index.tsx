@@ -1,10 +1,11 @@
 import styles from './index.less';
-import { Layout, Menu, Collapse } from 'antd';
+import { Layout, Menu, Collapse, Row, Col, Card } from 'antd';
 import {
   StarTwoTone,
   BuildTwoTone,
   AccountBookTwoTone,
 } from '@ant-design/icons';
+
 const { Sider, Content } = Layout;
 const { SubMenu } = Menu;
 const { Panel } = Collapse;
@@ -42,6 +43,7 @@ export default () => {
     );
   };
 
+  const style = { background: '#0092ff', padding: '8px 0' };
   return (
     <Layout style={{ height: '100%' }}>
       <Sider className={styles.slider} width={300} theme={'light'}>
@@ -64,7 +66,34 @@ export default () => {
         </div>
       </Sider>
       <Content style={{ background: '#fff' }}>
-        <div></div>
+        <div className="site-card-wrapper">
+          <Row gutter={[16, { xs: 8, sm: 16, md: 24, lg: 32 }]}>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+            <Col className="gutter-row" span={6}>
+              <div style={style}>col-6</div>
+            </Col>
+          </Row>
+        </div>
       </Content>
     </Layout>
   );
